@@ -13,6 +13,8 @@ function connect() {
 }
 
 function invokeContract() {
+
+  // Call the "getOwner" contract method getting the contract from the window object
   window.contract.methods.getOwner()
     .call()
     .then(result => {
@@ -23,8 +25,8 @@ function invokeContract() {
 setTimeout(() => {
     connect()
 
-    document.getElementById('status').innerHTML = 'Invoking contract method...'
+    document.getElementById('status').innerHTML = 'Invoking Smart contract method...'
 
     // Add some suspense to the demo before invoking the contract
-    setTimeout(() => invokeContract(), Math.random() * 10000)
+    setTimeout(() => invokeContract(), Math.random() * 5000)
 }, 2000)
