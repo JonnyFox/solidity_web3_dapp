@@ -51,6 +51,8 @@ export default {
     }
   },
   methods: {
+
+    // Connect to local blockchain
     connect() {
       let web3 = new Web3("http://127.0.0.1:8545")
 
@@ -93,6 +95,8 @@ export default {
           })
       })
     },
+    
+    // Add some delay to the calls 
     randomDelay(action) {
       this.loading = true
       setTimeout(() => {
